@@ -1,14 +1,15 @@
-# Solived-DisableEngineCutOff
-
+# Disable Engine Cut Off — System Documentation
+###### Standalone | Open-Source | No dependencies
 ## Overview
 
+#### Vanilla Engine - Explaination:
 GTA V's native flight model includes a built-in mechanic where holding the brake/reverse input (the **S** key on keyboard, or the equivalent analog brake/reverse trigger on controller) for roughly one second while flying or taxiing will automatically shut the aircraft's engine off. This is hardcoded into the base game's vehicle task system — it isn't something exposed through a single toggle native, and it isn't configurable through any standard FiveM convar.
 
 For ground vehicles this rarely matters in practice. For aircraft, it's a constant hazard: a pilot taps the brake a moment too long during a steep dive, a precision landing, or a tight maneuver, and the engine cuts mid-air. On tactical, aviation-focused, or simulation-style servers, this turns routine flying into a recurring annoyance and, in the wrong moment, a scripted-feeling "death" that has nothing to do with player skill or combat damage.
 
 `Disable Engine Cut Off` is a small, standalone, client-side resource that neutralizes this specific behavior — and only this behavior — scoped specifically to aircraft, without touching ground vehicles, boats, or any other engine-related system.
 
-## How It Works
+## How It Works:
 
 There is no native that directly disables this mechanic. The engine shutoff is enforced internally by the game's input/vehicle-task layer every tick, based on sustained brake input while flying. Because it can't be intercepted at the source, this resource takes the standard, reliable approach used across the FiveM scripting community: **detect and correct**.
 
