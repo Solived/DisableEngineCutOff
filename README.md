@@ -1,4 +1,4 @@
-# Solived-NoEngineCutOff
+# Solived-DisableEngineCutOff
 
 ## Overview
 
@@ -6,7 +6,7 @@ GTA V's native flight model includes a built-in mechanic where holding the brake
 
 For ground vehicles this rarely matters in practice. For aircraft, it's a constant hazard: a pilot taps the brake a moment too long during a steep dive, a precision landing, or a tight maneuver, and the engine cuts mid-air. On tactical, aviation-focused, or simulation-style servers, this turns routine flying into a recurring annoyance and, in the wrong moment, a scripted-feeling "death" that has nothing to do with player skill or combat damage.
 
-`Solived-NoEngineCutOff` is a small, standalone, client-side resource that neutralizes this specific behavior — and only this behavior — scoped specifically to aircraft, without touching ground vehicles, boats, or any other engine-related system.
+`Disable Engine Cut Off` is a small, standalone, client-side resource that neutralizes this specific behavior — and only this behavior — scoped specifically to aircraft, without touching ground vehicles, boats, or any other engine-related system.
 
 ## How It Works
 
@@ -62,7 +62,7 @@ To set expectations clearly for anyone evaluating it:
 ## Resource Structure
 
 ```
-Solived-NoEngineCutOff/
+Solived-DisableEngineCutOff/
 ├── fxmanifest.lua
 ├── config.lua
 └── client/
@@ -73,8 +73,8 @@ A single shared config file and a single client script. No server scripts, no sh
 
 ## Installation
 
-1. Drop the `Solived-NoEngineCutOff` folder into your `resources` directory.
-2. Add `ensure Solived-NoEngineCutOff` to your `server.cfg`.
+1. Drop the `Solived-DisableEngineCutOff` folder into your `resources` directory.
+2. Add `ensure Solived-DisableEngineCutOff` to your `server.cfg`.
 3. Script is scoped to aircraft (configurable vehicle classes) only, with optional blacklist / whitelist filtering by model.
    Open `config.lua` and add any custom aircraft to `Config.ModelList`.
 4. Start your server. No keybinds registered ~ depending on player's brake/reverse binds.
