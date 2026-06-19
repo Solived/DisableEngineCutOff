@@ -71,6 +71,16 @@ Solived-NoEngineCutOff/
 
 A single shared config file and a single client script. No server scripts, no shared exports beyond config, no UI.
 
+## Installation
+
+1. Drop the `Solived-NoEngineCutOff` folder into your `resources` directory.
+2. Add `ensure Solived-NoEngineCutOff` to your `server.cfg`.
+3. Script is scoped to aircraft (configurable vehicle classes) only, with optional blacklist / whitelist filtering by model.
+   Open `config.lua` and add any custom aircraft to `Config.ModelList`.
+4. Start your server. No keybinds registered ~ depending on player's brake/reverse binds.
+
+No SQL, no exports to configure, no other resources required.
+
 ## Configuration Reference
 
 | Option | Default | Description |
